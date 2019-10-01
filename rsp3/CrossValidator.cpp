@@ -1,7 +1,5 @@
 #include <dirent.h>
 #include <iostream>
-#include <sys/types.h>
-#include <vector>
 
 #include "CrossValidator.h"
 #include "DataHandler.h"

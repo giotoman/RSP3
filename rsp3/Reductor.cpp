@@ -7,7 +7,7 @@
 #include "Fullset.h"
 #include "Subset.h"
 
-Reductor::Reductor(){}
+Reductor::Reductor()= default;
 
 void Reductor::printInitialSubset()
 {
@@ -16,7 +16,7 @@ void Reductor::printInitialSubset()
 
 void Reductor::printReducedPoints()
 {
-    for (size_t i = 0; i < reduced_pts.size(); i++) reduced_pts[i].printPoint();
+    for (auto & reduced_pt : reduced_pts) reduced_pt.printPoint();
 }
 
 void Reductor::rsp3()

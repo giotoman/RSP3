@@ -13,9 +13,9 @@ class Reductor
         double exec_time = 0; //RSP3 execution time.
         float reduction_prct = 0; //Reduction percentage achieved.
         unsigned long dist_cnt = 0; //Distances calculated.
-        size_t initial_count; //Size of initial subset.
+        size_t initial_count{}; //Size of initial subset.
         size_t reduced_count = 0; //Size of reduced subset.
-        unsigned long long(*MDF_func)(Subset&); //Pointer to MDF function used in RSP3.
+        unsigned long long(*MDF_func)(Subset&){}; //Pointer to MDF function used in RSP3.
         std::string MDF_name; //Name of the MDF function.
         Subset initial_ss; //Initial subset.
         std::vector<Point> reduced_pts; //Reduced subset stored as points in a vector.

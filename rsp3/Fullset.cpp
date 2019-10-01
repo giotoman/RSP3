@@ -7,7 +7,7 @@
 
 
 
-Fullset::Fullset(){}
+Fullset::Fullset()= default;
 
 void Fullset::addSubset(const Subset& ss)
 {

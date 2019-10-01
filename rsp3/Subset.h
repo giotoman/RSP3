@@ -5,13 +5,11 @@
 
 #include "Point.h"
 
-
-
 class Subset
 {
     private:
         std::vector<Point*> v_points; //Vector containing pointers to points in ALL_POINTS global vector which form this subset.
-        size_t md_pos_p1, md_pos_p2; //Indexes of the two points that form the max distance in the subset.
+        size_t md_pos_p1{}, md_pos_p2{}; //Indexes of the two points that form the max distance in the subset.
         float max_d = -1; //Max distance value, initialized at -1 for control.
 
     public:

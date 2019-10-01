@@ -4,9 +4,7 @@
 #include "Point.h"
 #include "Subset.h"
 
-
-
-Subset::Subset(){}
+Subset::Subset()= default;
 
 void Subset::addPoint(Point *p)
 {
@@ -52,7 +50,7 @@ void Subset::divideByMD(Subset &D1, Subset &D2)
         else if (md_1 > md_2) D2.addPoint(v_point);
         else
         {
-            if (D1.v_points.size() == 0) D1.addPoint(v_point);
+            if (D1.v_points.empty()) D1.addPoint(v_point);
             else D2.addPoint(v_point);
         }
     }
