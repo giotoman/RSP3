@@ -25,6 +25,14 @@ were included in the Thesis testing experiments.
 |  WQW |   4898   |     11     |    11   |
 |  YST |   1484   |      8     |    10   |
 
+# Quick hull C++11 library
+
+Quick hull algorithm was implemented using **https://github.com/akuukka/quickhull**
+
+> C++ implementation of the 3D QuickHull algorithm  
+>
+> by [akuukka](https://github.com/akuukka)
+
 # Variables
 
 `path` : *directory* or *file*  
