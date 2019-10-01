@@ -26,15 +26,15 @@ Sample datasets are included for testing
 
 # Variables
 
-`path` : *directory* or *file*
-`mdf` : max distance function to be used (**GRID**, **CONV**, **MH**, **QH**, **HH**)
-`folds` : fold count (**file only**)
+`path` : *directory* or *file*  
+`mdf` : max distance function to be used (**GRID**, **CONV**, **MH**, **QH**, **HH**)  
+`folds` : fold count (**file only**)  
 
 # Flags
 
-`-N` : apply normalization (0-1)
-`-IRR`: apply interquartile range ranking
-`-NIRR`: apply both of the above
+`-N` : apply normalization (0-1)  
+`-IRR`: apply interquartile range ranking  
+`-NIRR`: apply both of the above  
 
 # Attribute selection
 
