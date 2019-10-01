@@ -20,20 +20,20 @@ add_executable(RSP3
         qhull/QuickHull.cpp
         qhull/QuickHull.hpp
         qhull/Types.hpp
-        CrossValidator.cpp
-        CrossValidator.h
-        DataHandler.cpp
-        DataHandler.h
-        Fold.cpp
-        Fold.h
-        Fullset.cpp
-        Fullset.h
+        rsp3/CrossValidator.cpp
+        rsp3/CrossValidator.h
+        rsp3/DataHandler.cpp
+        rsp3/DataHandler.h
+        rsp3/Fold.cpp
+        rsp3/Fold.h
+        rsp3/Fullset.cpp
+        rsp3/Fullset.h
         main.cpp
-        MDF.cpp
-        MDF.h
-        Point.cpp
-        Point.h
-        Reductor.cpp
-        Reductor.h
-        Subset.cpp
-        Subset.h)
+        rsp3/MDF.cpp
+        rsp3/MDF.h
+        rsp3/Point.cpp
+        rsp3/Point.h
+        rsp3/Reductor.cpp
+        rsp3/Reductor.h
+        rsp3/Subset.cpp
+        rsp3/Subset.h)
