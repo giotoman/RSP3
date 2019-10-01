@@ -47,11 +47,11 @@ Selection of *1, 2, ..., N* attributes of dataset (1-index based) seperated by *
 
 - Let directory `<path>/LIR` containing **5** test sets for cross validation and we desire only the **3** first attributes with *normalization* using `margin hull` as mdf.
 
-**Command**: ./RSP3 **\<path\>**/LIR MH -Ν 1,2,3
+**Command**: ./RSP3 *\<path\>*/LIR MH -Ν 1,2,3
 
 **File**
 
 - Let file `<path>/yeast.dat` and we desire **5** fold cross validation for all attributes with *normalization* and
 *interquartile* range ranking applied using `quick hull` as mdf.
 
-**Command**: ./RSP3 **\<path\>**/yeast.dat QH 5 -ΝIRR
+**Command**: ./RSP3 *\<path\>*/yeast.dat QH 5 -ΝIRR
