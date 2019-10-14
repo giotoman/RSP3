@@ -1,8 +1,6 @@
-# Thesis abstract
+Large volumes of training data introduce high computational cost in instance based classification. Data reduction algorithms aim to collect a small (condensing) set of representative training prototypes from the available training data. The Reduction by Space Partitioning (RSP3) algorithm is one of the most well-known prototype generation algorithms that repetitively divides the original training data into subgroups. This partitioning process searches the most distant instances in each subgroup. This is a costly process since it requires the calculation of all distances between the instances in each subgroup. We propose two new fast RSP3 variants, where the search of the most distant instances is accelerated by finding the convex hull of each subgroup. The first variant is called RSP3Q and searches the exact convex hull using Quick Hull algorithm and it is appropriate for datasets with limited dimensionality. The second variant is called RSP3A and approximates the convex hull by finding the Minimum Bounding Rectangle. It can be used for datasets of any dimensionality. The new variants are compared to each other and against RSP3 by executing experiments on sixteen datasets. The experimental study shows that the new variants involve a small computational cost to produce the condensing set without leading to less accurate classification and worse reduction rates.
 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the ever evolving scientific field of data categorization, the nearest neighbors algorithm is a stable, efficient method. However, it has several weaknesses that deem it inappropriate in some cases of data sets. Its main drawbacks are: high cost of categorizing each object due to multiple calculations, high storage requirements, and dependence of the accuracy of the results on the quality of the training data. In order to address its weaknesses, several data reduction algorithms have been implemented, aiming at minimizing the processing burden of the categorizer without affecting its accuracy. The Reduction by Space Partitioning algorithm is one of the most well-known prototype generation algorithms for accelerating instance based categorists. RSP3 is based on a repetitive separation process of the original training set. As the criterion for the most subset will be divided first, RSP3 adopts the larger diameter criterion. That is, the subset with the largest diameter defined by the two most distant objects is divided first. The process continues until the resulting subsets are homogeneous, that is, they include objects of the same class. The search for the two most remote objects of each subset is a costly process, since it requires the calculation of all the distances between the objects of each sub-set. Thus, RSP3 has a high computational pre-processing cost. In the framework of the thesis, computational geometry algorithms will be studied to find the Convex Hull of each subset. Convex Hull is composed by the objects of the data set that define its contour. The motivation for studying these algorithms stems from the following observation: If these objects that define Convex Hull are found, searching for the most remote objects in each subset will be done quickly since it will not be necessary to calculate all possible distances to the subset but only all possible distances between the objects of Convex Hull. In the experimental part of the thesis, two Convex Hull algorithms will be implemented and incorporated into RSP3. It will also be investigated whether it is possible to use Convex Hull algorithms in multi-dimensional datasets. The new variants of RSP3 will be tested in 15 sets of real data categorization data and their speed will be compared to that of the "conventional" RSP3.
-
-# Datasets
+# Datasets used in our experiments
 Sample datasets for testing are included in the **datasets** folder. Tha table below lists all datasets 
 that were included in the Thesis testing experiments. To test a dataset either include any number of
 **test** sets in a directory or provide the full dataset and choose the desired number of folds to be created
@@ -29,7 +27,7 @@ with the appropriate command arguments listed in the examples below.
 
 # Quick hull C++11 library
 
-Quick hull algorithm was implemented using **https://github.com/akuukka/quickhull**
+RSP3Q algorithm was implemented using **https://github.com/akuukka/quickhull**
 
 > C++ implementation of the 3D QuickHull algorithm  
 >
@@ -41,10 +39,16 @@ Quick hull algorithm was implemented using **https://github.com/akuukka/quickhul
 `mdf` : max distance function to be used (**GRID**, **CONV**, **MH**, **QH**, **HH**)  
 `folds` : fold count (**file only**)  
 
+GRID: Conventional RSP3
+CONV: Conventional K-NN without data reduction
+MH: RSP3A (approximation of convex hull)
+QH: RSP3Q (RSP3 with quick hull)
+HH: HYBRID HULL (please do not use it)
+
 # Flags
 
 `-N` : apply normalization (0-1)  
-`-IRR`: apply interquartile range ranking  
+`-IRR`: apply interquartile range ranking for attribute selection
 `-NIRR`: apply both of the above  
 
 # Attribute selection
