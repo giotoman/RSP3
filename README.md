@@ -40,11 +40,11 @@ RSP3Q algorithm was implemented using **https://github.com/akuukka/quickhull**
 `mdf` : max distance function to be used (**GRID**, **CONV**, **MH**, **QH**, **HH**)  
 `folds` : fold count (**file only**)  
 
-GRID: Conventional RSP3
-CONV: Conventional K-NN without data reduction
-MH: RSP3A (approximation of convex hull)
-QH: RSP3Q (RSP3 with quick hull)
-HH: HYBRID HULL (please do not use it)
+`GRID`: Conventional RSP3
+`CONV`: Conventional K-NN without data reduction
+`MH`: RSP3A (approximation of convex hull)
+`QH`: RSP3Q (RSP3 with quick hull)
+`HH`: HYBRID HULL (please do not use it)
 
 # Flags
 
