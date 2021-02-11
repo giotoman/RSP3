@@ -3,8 +3,6 @@
 #include "rsp3/CrossValidator.h"
 #include "rsp3/DataHandler.h"
 
-
-
 void handleArgs(int argc, char *argv[])
 {
     if (argc == 1) { std::cout << "No arguments found." << std::endl; exit(EXIT_FAILURE); }
@@ -14,10 +12,18 @@ void handleArgs(int argc, char *argv[])
 
     if (is_file(argv[1]))
     {
-        std::string str(argv[4]);
+        if(argc > 4)
+        {
+            std::string str(argv[4]);
 
-        DO_NORM = str.find('N') != std::string::npos;
-        DO_IRR = str.find("IRR") != std::string::npos;
+            DO_NORM = str.find('N') != std::string::npos;
+            DO_IRR = str.find("IRR") != std::string::npos;
+        }
+        else
+        {
+            DO_NORM = false;
+            DO_IRR = false;
+        }
 
         if (argc == 6) { selectDimensions(argv[5]); DO_SELECT = true; }
 
@@ -25,10 +31,18 @@ void handleArgs(int argc, char *argv[])
     }
     else if (is_dir(argv[1]))
     {
-        std::string str(argv[3]);
+        if(argc > 3)
+        {
+            std::string str(argv[3]);
 
-        DO_NORM = str.find('N') != std::string::npos;
-        DO_IRR = str.find("IRR") != std::string::npos;
+            DO_NORM = str.find('N') != std::string::npos;
+            DO_IRR = str.find("IRR") != std::string::npos;
+        }
+        else
+        {
+            DO_NORM = false;
+            DO_IRR = false;
+        }
 
         if (argc == 5) { selectDimensions(argv[4]); DO_SELECT = true; }
 
