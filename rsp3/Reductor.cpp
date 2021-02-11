@@ -79,14 +79,15 @@ void Reductor::printResults()
     std::cout << "     Execution time: " << exec_time << " sec(s)" << std::endl;
 }
 
-void Reductor::setMDF(e_MDF _MDF)
+void Reductor::setMDF(e_MDF MDF)
 {
-    switch(_MDF)
+    switch(MDF)
     {
         case 0 : MDF_name = "GRID"; MDF_func = MDF_GRID; return;
         case 1 : MDF_name = "MARGIN_HULL"; MDF_func = MDF_MHULL; return;
         case 2 : MDF_name = "QUICK_HULL"; MDF_func = MDF_QHULL; return;
         case 3 : MDF_name = "HYBRID_HULL"; MDF_func = MDF_HHULL; return;
+        case 5 : MDF_name = "RANDOM"; MDF_func = MDF_RND; return;
         default : MDF_name = "CONV";
     }
 }

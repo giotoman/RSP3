@@ -204,11 +204,24 @@ unsigned long long MDF_HHULL(Subset &ss)
     return d_count;
 }
 
+unsigned long long MDF_RND(Subset &ss)
+{
+    auto pos2 = ss.getSize() > 1 ? 1 : 0;
+
+    ss.setMDPOS1(0);
+    ss.setMDPOS2(pos2);
+    ss.setMAXD(*ss.getPointAt(0) >> *ss.getPointAt(pos2));
+
+    return 1;
+}
+
+
 e_MDF e_convert(const std::string &str)
 {
     if(str == "GRID") return GRID;
     else if(str == "MH") return MH;
     else if(str == "QH") return QH;
     else if (str == "HH") return HH;
+    else if (str == "RND") return RND;
     else return CONV;
 }

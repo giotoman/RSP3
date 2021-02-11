@@ -36,25 +36,27 @@ RSP3Q algorithm was implemented using **https://github.com/akuukka/quickhull**
 
 # Variables
 
-`path` : *directory* or *file*  
-`mdf` : max distance function to be used (**GRID**, **CONV**, **MH**, **QH**, **HH**)  
-`folds` : fold count (**file only**)  
+- `path` : *directory* or *file*  
+- `mdf` : max distance function to be used (**GRID**, **CONV**, **MH**, **QH**, **HH**)  
+- `folds` : fold count (**file only**)  
 
-`GRID`: Conventional RSP3  
-`CONV`: Conventional K-NN without data reduction  
-`MH`: RSP3A (approximation of convex hull)  
-`QH`: RSP3Q (RSP3 with quick hull)  
-`HH`: HYBRID HULL (please do not use it)  
+
+- `GRID`: Conventional RSP3  
+- `CONV`: Conventional K-NN without data reduction  
+- `MH`: RSP3A (approximation of convex hull)  
+- `QH`: RSP3Q (RSP3 with quick hull)  
+- `HH`: HYBRID HULL (please do not use it)
+- `RND`: RANDOM (for testing purposes)
 
 # Flags
 
-`-N` : apply normalization (0-1)  
-`-IRR`: apply interquartile range ranking for attribute selection
-`-NIRR`: apply both of the above  
+- `-N` : apply normalization (0-1)  
+- `-IRR`: apply interquartile range ranking for attribute selection
+- `-NIRR`: apply both of the above  
 
 # Attribute selection
 
-Selection of *1, 2, ..., N* attributes of dataset (1-index based) seperated by **`,`**
+Selection of *1, 2, ..., N* attributes of dataset (1-index based) separated by **`,`**
 
 # Examples
 

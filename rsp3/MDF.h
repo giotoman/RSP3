@@ -14,13 +14,15 @@ enum e_MDF
     MH = 1,
     QH = 2,
     HH = 3,
-    CONV = 4
+    CONV = 4,
+    RND = 5
 };
 
 unsigned long long MDF_GRID(Subset &ss);
 unsigned long long MDF_MHULL(Subset &ss);
 unsigned long long MDF_QHULL(Subset &ss);
 unsigned long long MDF_HHULL(Subset &ss);
+unsigned long long MDF_RND(Subset &ss);
 e_MDF e_convert(const std::string &str);
 
 #endif // MDF_H
