@@ -4,6 +4,7 @@
 #include "Point.h"
 #include "Subset.h"
 #include "qhull/QuickHull.hpp"
+#include "RandomIterator.h"
 
 std::vector<size_t> RANKS;
 size_t DIMS;
@@ -206,11 +207,13 @@ unsigned long long MDF_HHULL(Subset &ss)
 
 unsigned long long MDF_RND(Subset &ss)
 {
-    auto pos2 = ss.getSize() > 1 ? 1 : 0;
+    if (ss.getSize() < 3) return MDF_GRID(ss);
 
-    ss.setMDPOS1(0);
-    ss.setMDPOS2(pos2);
-    ss.setMAXD(*ss.getPointAt(0) >> *ss.getPointAt(pos2));
+    RandomIterator iterator(2, 0, ss.getSize() - 1);
+
+    ss.setMDPOS1(iterator.next());
+    ss.setMDPOS2(iterator.next());
+    ss.setMAXD(*ss.getPointAt(ss.getMDPOS1()) >> *ss.getPointAt(ss.getMDPOS2()));
 
     return 1;
 }

@@ -36,4 +36,6 @@ add_executable(RSP3
         rsp3/Reductor.cpp
         rsp3/Reductor.h
         rsp3/Subset.cpp
-        rsp3/Subset.h)
+        rsp3/Subset.h
+        rsp3/RandomIterator.cpp
+        rsp3/RandomIterator.h)
